@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&display=swap");
-
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
+}
 body {
   font-family: "Noto Sans JP", sans-serif;
 }
@@ -14,6 +17,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .cover__logo {
@@ -48,6 +52,30 @@ body {
   background-color: white;
 }
 
+.cover__animation {
+  background: linear-gradient(
+    to right,
+    #7953cd 20%,
+    #00affa 30%,
+    #0190cd 70%,
+    #764ada 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 .main {
   display: flex;
   background-color: #fffefc;
@@ -61,6 +89,21 @@ body {
 }
 .nav {
   flex-basis: 20%;
+  position: relative;
+}
+.nav ol {
+  position: fixed;
+  left: 20px;
+  top: 80px;
+  opacity: 0;
+}
+.nav ol li {
+  margin-bottom: 16px;
+  color: #969696;
+}
+.nav ol .nav_index {
+  font-weight: 600;
+  color: #333;
 }
 @media screen and (max-width: 768px) {
   .nav {
@@ -197,4 +240,16 @@ body {
 .article a:hover {
   text-decoration: underline;
   color: #23a3f2;
+}
+
+.nav_target {
+  padding: 3px 6px;
+  color: #fff;
+  background-color: #0088c3;
+  border-radius: 5px;
+}
+
+.show {
+  opacity: 1 !important;
+  transition: opacity 0.5s ease-in-out;
 }

@@ -21,6 +21,20 @@
       </h1>
       <div class="cover__scroll">scroll</div>
     </section>
+    <aside class="qr">
+      <div class="qr__container">
+        <div class="qr__img-container">
+          <img src="img/qr.svg" alt="qr" />
+        </div>
+        <div>
+          <p>アンケートにご協力お願いします。</p>
+          <p>
+            Join at <span class="bold font-14">Slido.com</span>
+            <span class="bold font-blue">#3218 196</span>
+          </p>
+        </div>
+      </div>
+    </aside>
     <main class="main">
       <nav class="nav">
         <ol>
@@ -158,6 +172,9 @@
               >
             </li>
           </ul>
+          <div class="img_container">
+            <img src="img/price.png" alt="price" />
+          </div>
           <h3>デメリット</h3>
           <ul>
             <li>tailwindCSSに従属</li>
@@ -168,22 +185,32 @@
                 >山ほど</span
               >ある。
             </li>
+            <li>無料プランだったら、privateモード利用不可</li>
           </ul>
         </section>
         <section>
           <h2 id="title4">どんな時に使ったらいいか。</h2>
           <ul>
             <li>サイトプロジェクト</li>
+            <li>プロトタイプの作成</li>
           </ul>
         </section>
         <section>
           <h2 id="title5">実習しよう</h2>
-          <p>アンケートの結果：</p>
+          <a
+            target="_blank"
+            href="https://app.sli.do/event/iMWfmencdqrsRTCFXRmHe5/embed/polls/8eb191e9-66de-485c-a40d-364910a52908"
+            >アンケートの結果</a
+          >
+          <div class="answer_container">
+            <iframe
+              src="https://app.sli.do/event/iMWfmencdqrsRTCFXRmHe5/embed/polls/8eb191e9-66de-485c-a40d-364910a52908"
+              class="answer_iframe"
+            ></iframe>
+          </div>
         </section>
       </article>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

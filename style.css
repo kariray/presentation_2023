@@ -5,6 +5,7 @@ html {
 }
 body {
   font-family: "Noto Sans JP", sans-serif;
+  position: relative;
 }
 
 .cover {
@@ -249,7 +250,76 @@ body {
   border-radius: 5px;
 }
 
+.answer_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.answer_iframe {
+  width: 80%;
+  height: 600px;
+}
+
+.qr {
+  position: fixed;
+  top: 80px;
+  right: 10px;
+  width: 280px;
+  height: 80px;
+  padding: 2px;
+  font-size: 12px;
+  border-radius: 10px;
+  line-height: 1.3rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: qrBorder 10s ease infinite;
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .qr {
+    display: none;
+  }
+}
+
+@keyframes qrBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.qr__container {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 100%;
+  background-color: #fffefc;
+  border-radius: 8px;
+}
+.qr__img-container {
+  height: 100%;
+}
+
+.qr img {
+  border-radius: 8px 0 0 8px;
+  height: 100%;
+}
+
 .show {
   opacity: 1 !important;
   transition: opacity 0.5s ease-in-out;
+}
+
+.font-blue {
+  color: #0088c3;
+}
+.font-14 {
+  font-size: 15px;
 }

@@ -28,13 +28,16 @@ function highlightSidebarLink(targetTitleId) {
 }
 
 const navLists = document.querySelector(".nav ol");
+const qr = document.querySelector(".qr");
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
   const viewportHeight = window.innerHeight;
 
-  if (scrollPosition >= viewportHeight - 50) {
+  if (scrollPosition >= viewportHeight - 60) {
     navLists.classList.add("show");
+    qr.classList.add("show");
   } else {
     navLists.classList.remove("show");
+    qr.classList.remove("show");
   }
 });
